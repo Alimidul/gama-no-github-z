@@ -1,0 +1,771 @@
+-- AULA 1 GIT 28OUT2020
+
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit
+$ git init
+Initialized empty Git repository in C:/Users/Karoellen Paixão/Desktop/aulasgit/.git/
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git add "index.html"
+fatal: pathspec 'index.html' did not match any files
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git add index.html
+fatal: pathspec 'index.html' did not match any files
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ ls -a
+./  ../  .git/
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ touch index.html
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git add index.html
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git commit -m "adicionado arquivo Index ao nosso site"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'Karoellen Paixão@Karoellen.(none)')
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git config --global user.email "zadetec@gmail.com"
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git config --global user.name "Ludimila"
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git commit -m "adicionado arquivo Index ao nosso site"
+[master (root-commit) 7eb941e] adicionado arquivo Index ao nosso site
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git log
+commit 7eb941e014934c24e223c109cab1da23e9de0abc (HEAD -> master)
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:31:44 2020 -0300
+
+    adicionado arquivo Index ao nosso site
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        aulagit_sublime.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        aulagit_sublime.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git add index.html
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git commit -m "Inclusao de um subtitulo"
+[master b5ab66d] Inclusao de um subtitulo
+ 1 file changed, 11 insertions(+)
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ touch script.js
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ gi add script.js
+bash: gi: command not found
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git add script.js
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   script.js
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        aulagit_sublime.html
+
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git add index.html
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git commit -m "update arquivo index.html"
+[master 9f3452c] update arquivo index.html
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 script.js
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git log
+commit 9f3452cf8e1a4ae6313d7b646e3f5138be5552b2 (HEAD -> master)
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:58:36 2020 -0300
+
+    update arquivo index.html
+
+commit b5ab66d2ffa7004b006faf08dbcd53ab263e8134
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:48:45 2020 -0300
+
+    Inclusao de um subtitulo
+
+commit 7eb941e014934c24e223c109cab1da23e9de0abc
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:31:44 2020 -0300
+
+    adicionado arquivo Index ao nosso site
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        aulagit_sublime.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git add <aulagit_sublime.html>
+bash: syntax error near unexpected token `newline'
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git add aulagit_sublime.html
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   aulagit_sublime.html
+
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git log
+commit 9f3452cf8e1a4ae6313d7b646e3f5138be5552b2 (HEAD -> master)
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:58:36 2020 -0300
+
+    update arquivo index.html
+
+commit b5ab66d2ffa7004b006faf08dbcd53ab263e8134
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:48:45 2020 -0300
+
+    Inclusao de um subtitulo
+
+commit 7eb941e014934c24e223c109cab1da23e9de0abc
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:31:44 2020 -0300
+
+    adicionado arquivo Index ao nosso site
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git add index.html script.js
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git commit -m "update arquivo index.html"
+[master 6726bf4] update arquivo index.html
+ 1 file changed, 11 insertions(+)
+ create mode 100644 aulagit_sublime.html
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git log
+commit 6726bf43226eb4ed82ca455d54c13e914bce7e96 (HEAD -> master)
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 20:03:22 2020 -0300
+
+    update arquivo index.html
+
+commit 9f3452cf8e1a4ae6313d7b646e3f5138be5552b2
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:58:36 2020 -0300
+
+    update arquivo index.html
+
+commit b5ab66d2ffa7004b006faf08dbcd53ab263e8134
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:48:45 2020 -0300
+
+    Inclusao de um subtitulo
+
+commit 7eb941e014934c24e223c109cab1da23e9de0abc
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:31:44 2020 -0300
+
+    adicionado arquivo Index ao nosso site
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git branch feature/lista-produtos
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git checkout feature/lista-produtos
+error: pathspec 'feature/lista-produtos' did not match any file(s) known to git
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ touch listaprodutos.html
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git add listaprodutos.html
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git reset
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git add listaprodutos.html
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git log
+commit 6726bf43226eb4ed82ca455d54c13e914bce7e96 (HEAD -> master, feature<U+0091>/lista-produtos)
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 20:03:22 2020 -0300
+
+    update arquivo index.html
+
+commit 9f3452cf8e1a4ae6313d7b646e3f5138be5552b2
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:58:36 2020 -0300
+
+    update arquivo index.html
+
+commit b5ab66d2ffa7004b006faf08dbcd53ab263e8134
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:48:45 2020 -0300
+
+    Inclusao de um subtitulo
+
+commit 7eb941e014934c24e223c109cab1da23e9de0abc
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:31:44 2020 -0300
+
+set mark: ...skipping...
+commit 6726bf43226eb4ed82ca455d54c13e914bce7e96 (HEAD -> master, feature<U+0091>commit 6726bf43226eb4ed82ca455d54c13e914bce7e96 (HEAD -> master, feature<U+0091>
+commit 6726bf43226eb4ed82ca455d54c13e914bce7e96 (HEAD -> master, feature<U+0091>
+commit 6726bf43226eb4ed82ca455d54c13e914bce7e96 (HEAD -> master, feature<U+0091>
+commit 6726bf43226eb4ed82ca455d54c13e914bce7e96 (HEAD -> master, feature<U+0091>
+/lista-produtos)
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 20:03:22 2020 -0300
+
+    update arquivo index.html
+
+commit 9f3452cf8e1a4ae6313d7b646e3f5138be5552b2
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:58:36 2020 -0300
+
+    update arquivo index.html
+
+commit b5ab66d2ffa7004b006faf08dbcd53ab263e8134
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:48:45 2020 -0300
+
+    Inclusao de um subtitulo
+
+commit 7eb941e014934c24e223c109cab1da23e9de0abc
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:31:44 2020 -0300
+
+...skipping...
+commit 6726bf43226eb4ed82ca455d54c13e914bce7e96 (HEAD -> master, feature<U+0091>commit 6726bf43226eb4ed82ca455d54c13e914bce7e96 (HEAD -> master, feature<U+0091>
+/lista-produtos)
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 20:03:22 2020 -0300
+
+    update arquivo index.html
+
+commit 9f3452cf8e1a4ae6313d7b646e3f5138be5552b2
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:58:36 2020 -0300
+
+    update arquivo index.html
+
+commit b5ab66d2ffa7004b006faf08dbcd53ab263e8134
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:48:45 2020 -0300
+
+    Inclusao de um subtitulo
+
+commit 7eb941e014934c24e223c109cab1da23e9de0abc
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:31:44 2020 -0300
+
+...skipping...
+commit 6726bf43226eb4ed82ca455d54c13e914bce7e96 (HEAD -> master, feature<U+0091>/lista-produtos)
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 20:03:22 2020 -0300
+
+    update arquivo index.html
+
+commit 9f3452cf8e1a4ae6313d7b646e3f5138be5552b2
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:58:36 2020 -0300
+
+    update arquivo index.html
+
+commit b5ab66d2ffa7004b006faf08dbcd53ab263e8134
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:48:45 2020 -0300
+
+    Inclusao de um subtitulo
+
+commit 7eb941e014934c24e223c109cab1da23e9de0abc
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:31:44 2020 -0300
+
+...skipping...
+commit 6726bf43226eb4ed82ca455d54c13e914bce7e96 (HEAD -> master, feature<U+0091>commit 6726bf43226eb4ed82ca455d54c13e914bce7e96 (HEAD -> master, feature<U+0091>
+/lista-produtos)
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 20:03:22 2020 -0300
+
+    update arquivo index.html
+
+commit 9f3452cf8e1a4ae6313d7b646e3f5138be5552b2
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:58:36 2020 -0300
+
+    update arquivo index.html
+
+commit b5ab66d2ffa7004b006faf08dbcd53ab263e8134
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:48:45 2020 -0300
+
+    Inclusao de um subtitulo
+
+commit 7eb941e014934c24e223c109cab1da23e9de0abc
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:31:44 2020 -0300
+
+...skipping...
+commit 6726bf43226eb4ed82ca455d54c13e914bce7e96 (HEAD -> master, feature<U+0091>commit 6726bf43226eb4ed82ca455d54c13e914bce7e96 (HEAD -> master, feature<U+0091>bce7e96 (HEAD -> master, feature<U+0091>
+commit 6726bf43226eb4ed82ca455d54c13e914bce7e96 (HEAD -> master, feature<U+0091>
+commit 6726bf43226eb4ed82ca455d54c13e914bce7e96 (HEAD -> master, feature<U+0091>
+/lista-produtos)
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 20:03:22 2020 -0300
+
+    update arquivo index.html
+
+commit 9f3452cf8e1a4ae6313d7b646e3f5138be5552b2
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:58:36 2020 -0300
+
+    update arquivo index.html
+
+commit b5ab66d2ffa7004b006faf08dbcd53ab263e8134
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:48:45 2020 -0300
+
+    Inclusao de um subtitulo
+
+commit 7eb941e014934c24e223c109cab1da23e9de0abc
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:31:44 2020 -0300
+
+    adicionado arquivo Index ao nosso site
+...skipping...
+
+                   SUMMARY OF LESS COMMANDS
+
+      Commands marked with * may be preceded by a number, N.
+      Notes in parentheses indicate the behavior if N is given.
+      A key preceded by a caret indicates the Ctrl key; thus ^K is ctrl-K.
+
+  h  H                 Display this help.
+  q  :q  Q  :Q  ZZ     Exit.
+ ---------------------------------------------------------------------------
+
+                           MOVING
+
+  e  ^E  j  ^N  CR  *  Forward  one line   (or N lines).
+  y  ^Y  k  ^K  ^P  *  Backward one line   (or N lines).
+  f  ^F  ^V  SPACE  *  Forward  one window (or N lines).
+  b  ^B  ESC-v      *  Backward one window (or N lines).
+  z                 *  Forward  one window (and set window to N).
+  w                 *  Backward one window (and set window to N).
+  ESC-SPACE         *  Forward  one window, but don't stop at end-of-file.
+  d  ^D             *  Forward  one half-window (and set half-window to N).
+  u  ^U             *  Backward one half-window (and set half-window to N).
+  ESC-)  RightArrow *  Right one half screen width (or N positions).
+  ESC-(  LeftArrow  *  Left  one half screen width (or N positions).
+  ESC-}  ^RightArrow   Right to last column displayed.
+  ESC-{  ^LeftArrow    Left  to first column.
+  F                    Forward forever; like "tail -f".
+  ESC-F                Like F but stop when search pattern is found.
+  r  ^R  ^L            Repaint screen.
+  R                    Repaint screen, discarding buffered input.
+        ---------------------------------------------------
+        Default "window" is the screen height.
+        Default "half-window" is half of the screen height.
+ ---------------------------------------------------------------------------
+
+HELP -- Press RETURN for more, or q when done...skipping...
+commit 6726bf43226eb4ed82ca455d54c13e914bce7e96 (HEAD -> master, feature<U+0091>
+/lista-produtos)
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 20:03:22 2020 -0300
+
+    update arquivo index.html
+
+commit 9f3452cf8e1a4ae6313d7b646e3f5138be5552b2
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:58:36 2020 -0300
+
+    update arquivo index.html
+
+commit b5ab66d2ffa7004b006faf08dbcd53ab263e8134
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:48:45 2020 -0300
+
+    Inclusao de um subtitulo
+
+commit 7eb941e014934c24e223c109cab1da23e9de0abc
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:31:44 2020 -0300
+
+...skipping...
+commit 6726bf43226eb4ed82ca455d54c13e914bce7e96 (HEAD -> master, feature<U+0091>/lista-produtos)
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 20:03:22 2020 -0300
+
+    update arquivo index.html
+
+commit 9f3452cf8e1a4ae6313d7b646e3f5138be5552b2
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:58:36 2020 -0300
+
+    update arquivo index.html
+
+commit b5ab66d2ffa7004b006faf08dbcd53ab263e8134
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:48:45 2020 -0300
+
+    Inclusao de um subtitulo
+
+commit 7eb941e014934c24e223c109cab1da23e9de0abc
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:31:44 2020 -0300
+
+...skipping...
+commit 6726bf43226eb4ed82ca455d54c13e914bce7e96 (HEAD -> master, feature<U+0091>/lista-produtos)
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 20:03:22 2020 -0300
+
+    update arquivo index.html
+
+commit 9f3452cf8e1a4ae6313d7b646e3f5138be5552b2
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:58:36 2020 -0300
+
+    update arquivo index.html
+
+commit b5ab66d2ffa7004b006faf08dbcd53ab263e8134
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:48:45 2020 -0300
+
+    Inclusao de um subtitulo
+
+commit 7eb941e014934c24e223c109cab1da23e9de0abc
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:31:44 2020 -0300
+
+...skipping...
+commit 6726bf43226eb4ed82ca455d54c13e914bce7e96 (HEAD -> master, feature<U+0091>/lista-produtos)
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 20:03:22 2020 -0300
+
+    update arquivo index.html
+
+commit 9f3452cf8e1a4ae6313d7b646e3f5138be5552b2
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:58:36 2020 -0300
+
+    update arquivo index.html
+
+commit b5ab66d2ffa7004b006faf08dbcd53ab263e8134
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:48:45 2020 -0300
+
+    Inclusao de um subtitulo
+
+commit 7eb941e014934c24e223c109cab1da23e9de0abc
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:31:44 2020 -0300
+
+...skipping...
+commit 6726bf43226eb4ed82ca455d54c13e914bce7e96 (HEAD -> master, feature<U+0091>/lista-produtos)
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 20:03:22 2020 -0300
+
+    update arquivo index.html
+
+commit 9f3452cf8e1a4ae6313d7b646e3f5138be5552b2
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:58:36 2020 -0300
+
+    update arquivo index.html
+
+commit b5ab66d2ffa7004b006faf08dbcd53ab263e8134
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:48:45 2020 -0300
+
+    Inclusao de um subtitulo
+
+commit 7eb941e014934c24e223c109cab1da23e9de0abc
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:31:44 2020 -0300
+
+...skipping...
+commit 6726bf43226eb4ed82ca455d54c13e914bce7e96 (HEAD -> master, feature<U+0091>/lista-produtos)
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 20:03:22 2020 -0300
+
+    update arquivo index.html
+
+commit 9f3452cf8e1a4ae6313d7b646e3f5138be5552b2
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:58:36 2020 -0300
+
+    update arquivo index.html
+
+commit b5ab66d2ffa7004b006faf08dbcd53ab263e8134
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:48:45 2020 -0300
+
+    Inclusao de um subtitulo
+
+commit 7eb941e014934c24e223c109cab1da23e9de0abc
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:31:44 2020 -0300
+
+    adicionado arquivo Index ao nosso site
+...skipping...
+/lista-produtos)
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 20:03:22 2020 -0300
+
+    update arquivo index.html
+
+commit 9f3452cf8e1a4ae6313d7b646e3f5138be5552b2
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:58:36 2020 -0300
+
+    update arquivo index.html
+
+commit b5ab66d2ffa7004b006faf08dbcd53ab263e8134
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:48:45 2020 -0300
+
+    Inclusao de um subtitulo
+
+commit 7eb941e014934c24e223c109cab1da23e9de0abc
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:31:44 2020 -0300
+
+    adicionado arquivo Index ao nosso site
+...skipping...
+/lista-produtos)
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 20:03:22 2020 -0300
+
+    update arquivo index.html
+
+commit 9f3452cf8e1a4ae6313d7b646e3f5138be5552b2
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:58:36 2020 -0300
+
+    update arquivo index.html
+
+commit b5ab66d2ffa7004b006faf08dbcd53ab263e8134
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:48:45 2020 -0300
+
+    Inclusao de um subtitulo
+
+commit 7eb941e014934c24e223c109cab1da23e9de0abc
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:31:44 2020 -0300
+
+    adicionado arquivo Index ao nosso site
+...skipping...
+commit 6726bf43226eb4ed82ca455d54c13e914bce7e96 (HEAD -> master, feature<U+0091>
+/lista-produtos)
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 20:03:22 2020 -0300
+
+    update arquivo index.html
+
+commit 9f3452cf8e1a4ae6313d7b646e3f5138be5552b2
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:58:36 2020 -0300
+
+    update arquivo index.html
+
+commit b5ab66d2ffa7004b006faf08dbcd53ab263e8134
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:48:45 2020 -0300
+
+    Inclusao de um subtitulo
+
+commit 7eb941e014934c24e223c109cab1da23e9de0abc
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:31:44 2020 -0300
+
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ help
+GNU bash, version 4.4.23(1)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                            history [-c] [-d offset] [n] or hist>
+ (( expression ))                        if COMMANDS; then COMMANDS; [ elif C>
+ . filename [arguments]                  jobs [-lnprs] [jobspec ...] or jobs >
+ :                                       kill [-s sigspec | -n signum | -sigs>
+ [ arg... ]                              let arg [arg ...]
+ [[ expression ]]                        local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]          logout [n]
+ bg [job_spec ...]                       mapfile [-d delim] [-n count] [-O or>
+ bind [-lpsvPSVX] [-m keymap] [-f file>  popd [-n] [+N | -N]
+ break [n]                               printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]       pushd [-n] [+N | -N | dir]
+ caller [expr]                           pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...)>  read [-ers] [-a array] [-d delim] [->
+ cd [-L|[-P [-e]] [-@]] [dir]            readarray [-n count] [-O origin] [-s>
+ command [-pVv] command [arg ...]        readonly [-aAf] [name[=value] ...] o>
+ compgen [-abcdefgjksuv] [-o option] [>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] >  select NAME [in WORDS ... ;] do COMM>
+ compopt [-o|+o option] [-DE] [name ..>  set [-abefhkmnptuvxBCHP] [-o option->
+ continue [n]                            shift [n]
+ coproc [NAME] command [redirections]    shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=v>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                  suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid >  test [expr]
+ echo [-neE] [arg ...]                   time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [na>  times
+ eval [arg ...]                          trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argume>  true
+ exit [n]                                type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or ex>  typeset [-aAfFgilnrtux] [-p] name[=v>
+ false                                   ulimit [-SHabcdefiklmnpqrstuvxPT] [l>
+ fc [-e ename] [-lnr] [first] [last] o>  umask [-p] [-S] [mode]
+ fg [job_spec]                           unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMAND>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMAN>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name >  variables - Names and meanings of so>
+ getopts optstring name [arg]            wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name >  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]               { COMMANDS ; }
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git commit -m "lista de produtos adicionada"
+[master 8033ad6] lista de produtos adicionada
+ 1 file changed, 11 insertions(+)
+ create mode 100644 listaprodutos.html
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git checkout master
+Already on 'master'
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git branch feature/lista-produtos
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git merge feature/lista-produtos
+Already up to date.
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git log
+commit 8033ad616a88ffa0d1ca47a9070613eb3d3631f1 (HEAD -> master, feature/lista-produtos)
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 20:22:56 2020 -0300
+
+    lista de produtos adicionada
+
+commit 6726bf43226eb4ed82ca455d54c13e914bce7e96 (feature<U+0091>/lista-produtos)
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 20:03:22 2020 -0300
+
+    update arquivo index.html
+
+commit 9f3452cf8e1a4ae6313d7b646e3f5138be5552b2
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:58:36 2020 -0300
+
+    update arquivo index.html
+
+commit b5ab66d2ffa7004b006faf08dbcd53ab263e8134
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 19:48:45 2020 -0300
+
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git show
+commit 8033ad616a88ffa0d1ca47a9070613eb3d3631f1 (HEAD -> master, feature/lista-produtos)
+Author: Ludimila <zadetec@gmail.com>
+Date:   Fri Oct 30 20:22:56 2020 -0300
+
+    lista de produtos adicionada
+
+diff --git a/listaprodutos.html b/listaprodutos.html
+new file mode 100644
+index 0000000..96b0b83
+--- /dev/null
++++ b/listaprodutos.html
+@@ -0,0 +1,11 @@
++
++
++<!DOCTYPE html>
++<html>
++<head>
++       <title></title>
++</head>
++<body>
++<h1>Lista de Produtos em Desenvolvimento</h1>
++</body>
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git branch -D feature/lista-produtos
+Deleted branch feature/lista-produtos (was 8033ad6).
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$ git branch
+  feature<U+0091>/lista-produtos
+* master
+
+Karoellen Paixão@Karoellen MINGW64 ~/Desktop/aulasgit (master)
+$
